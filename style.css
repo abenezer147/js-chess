@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+}
+
+.board {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+}
+
+.row:nth-of-type(odd) .square:nth-of-type(odd) {
+    background-color: #f4f7fa;
+}
+
+.row:nth-of-type(odd) .square:nth-of-type(even) {
+    background-color: #b7C0d8;
+}
+
+.row:nth-of-type(even) .square:nth-of-type(odd) {
+    background-color: #b7C0d8;
+}
+
+.row:nth-of-type(even) .square:nth-of-type(even) {
+    background-color: #f4f7fa;
+}
