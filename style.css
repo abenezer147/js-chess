@@ -14,6 +14,7 @@ body {
     display: grid;
     place-content: center;
     height: 100vh;
+    position: relative;
 }
 
 .row {
@@ -25,18 +26,16 @@ body {
     height: 80px;
 }
 
-.row:nth-of-type(odd) .square:nth-of-type(odd) {
+.row:nth-of-type(odd) .square:nth-of-type(odd),
+.row:nth-of-type(even) .square:nth-of-type(even) {
     background-color: #f4f7fa;
 }
 
-.row:nth-of-type(odd) .square:nth-of-type(even) {
-    background-color: #b7C0d8;
-}
-
+.row:nth-of-type(odd) .square:nth-of-type(even),
 .row:nth-of-type(even) .square:nth-of-type(odd) {
     background-color: #b7C0d8;
 }
 
-.row:nth-of-type(even) .square:nth-of-type(even) {
-    background-color: #f4f7fa;
+.piece {
+    position: absolute;
 }
